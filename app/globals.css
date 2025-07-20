@@ -1,26 +1,99 @@
+/* Reset styles */
+
+
+body {
+  font-family: Inter, sans-serif;
+}
+
+/* Import Tailwind first */
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+/* Custom utilities inside Tailwind layer */
+@import "tailwindcss";
+
+@layer utilities {
+  .btn_white {
+    @apply border border-white bg-white px-8 py-3 text-green-500;
+  }
+
+  .btn_white_text {
+    @apply border border-white bg-white px-8 py-3 text-gray-800;
+  }
+
+  .btn_green {
+    @apply border border-green-500 bg-green-500 px-8 py-5 text-white;
+  }
+
+  .btn_dark_green {
+    @apply bg-green-800 px-8 py-4 text-white transition-all hover:bg-black;
+  }
+
+  .btn_dark_green_outline {
+    @apply border border-gray-300 bg-green-800 px-8 py-5 text-white;
+  }
+
+  .max-container {
+    @apply mx-auto max-w-[1440px];
+  }
+
+  .padding-container {
+    @apply px-6 lg:px-20 ;
+  }
+
+  .flexCenter {
+    @apply flex items-center justify-center;
+  }
+
+  .flexBetween {
+    @apply flex items-center justify-between;
+  }
+
+  .flexStart {
+    @apply flex items-center justify-start;
+  }
+
+  .flexEnd {
+    @apply flex items-center justify-end;
+  }
+
+  /* Typography */
+  .regular-64 {
+    @apply text-[64px] font-normal leading-[120%];
+  }
+  .bold-64 {
+    @apply text-[64px] font-bold leading-[120%];
+  }
+
+  /* Hero */
+  .hero-map {
+    @apply absolute right-0 top-0 h-screen w-screen bg-cover bg-center md:-right-28 xl:-top-60;
+  }
+
+  /* Camp */
+  .camp-quote {
+    @apply absolute -right-6 bottom-4 w-[140px] lg:bottom-10 xl:-right-8 xl:w-[186px];
+  }
+
+  /* Feature */
+  .feature-phone {
+    @apply absolute top-[13%] z-10 hidden max-w-[1500px] rotate-[15deg] md:-left-16 lg:flex;
+  }
+
+  /* Get App */
+  .get-app {
+    @apply relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-green-800 bg-cover bg-center bg-no-repeat px-6 py-12 text-white rounded-3xl;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
+/* Hide scrollbar */
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+.hide-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
