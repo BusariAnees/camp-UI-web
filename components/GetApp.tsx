@@ -5,8 +5,8 @@ import Image from 'next/image'
 const GetApp = () => {
   return (
     <div>
-         <section className="flexCenter w-full flex-col pb-[100px]">
-      <div className="get-app bg-[url('/pattern.png')] bg-[rgba(0,0,0,0.83)] lg:w-[80%]! lg:flex! lg:flex-row! lg:py-0! lg:h-[30rem]!">
+         <section className=" padding-container flexCenter w-full flex-col pb-[100px]">
+      <div className="get-app bg-[url('/pattern.png')] bg-[rgba(0,0,0,0.83)] w-full lg:flex! lg:flex-row! lg:py-0! lg:h-[30rem]! ">
         <div className="z-20 flex w-full flex-1 flex-col items-start justify-center gap-12">
           <h2 className="font-bold text-[2.1rem] lg:text-[3rem] lg:font-bold lg:max-w-[320px]">Get for free now!</h2>
           <p className="regular-16 text-gray-10">Available on iOS and Android</p>
