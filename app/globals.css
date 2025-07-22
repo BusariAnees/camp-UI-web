@@ -31,7 +31,7 @@ body {
   }
 
   .btn_dark_green_outline {
-    @apply border border-gray-300 bg-green-800 px-8 py-5 text-white;
+    @apply border border-gray-300 bg-[rgba(0,0,0,0)]  px-8 py-5 text-white;
   }
 
   .max-container {
@@ -82,8 +82,8 @@ body {
   }
 
   /* Get App */
-  .get-app {
-    @apply relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-green-800 bg-cover bg-center bg-no-repeat px-6 py-12 text-white rounded-3xl;
+  .get-app{
+    @apply relative flex w-full flex-col justify-between gap-32 overflow-hidden bg-[rgb(0,0,0/83%)] bg-cover bg-center bg-no-repeat px-6 py-12 text-white rounded-3xl;
   }
 }
 
